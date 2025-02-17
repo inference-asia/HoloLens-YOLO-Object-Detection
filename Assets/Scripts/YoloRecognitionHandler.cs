@@ -131,7 +131,8 @@ namespace Assets.Scripts
         private void TriggerDetectionActions()
         {
             // Only apply actions if item have been seen multiple times.
-            foreach (DisplayedItem item in this.yoloItems.Where(item => item.IsInCameraView && item.TimesSeen >= Parameters.MinTimesSeen))
+            // foreach (DisplayedItem item in this.yoloItems.Where(item => item.IsInCameraView && item.TimesSeen >= Parameters.MinTimesSeen))
+            foreach (DisplayedItem item in this.yoloItems)
             {
                 // Show marker
                 this.ManageTrackingMarker(item);
